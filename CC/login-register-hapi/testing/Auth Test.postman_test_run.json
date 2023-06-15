@@ -1,0 +1,646 @@
+{
+	"id": "9dfdbf7b-ed2c-4853-838c-c1f1408ecd1c",
+	"name": "Auth Test",
+	"timestamp": "2023-05-26T01:13:09.572Z",
+	"collection_id": "23402383-f3cfcb1a-bf0d-442b-9ad7-7b7bae56e4d2",
+	"folder_id": 0,
+	"environment_id": "23402383-abbfef5f-1a3a-48d6-94cd-a5f9122f5b3f",
+	"totalPass": 69,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-05-26T01:13:08.841Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "8b2d34ec-aefa-426f-8797-7102dcf1075e",
+			"name": "Adding User",
+			"url": "localhost:5000/users",
+			"time": 124,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"response status code should have 201 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"response body data should have userId property and not equal to empty": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 201 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body data should have userId property and not equal to empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				124
+			],
+			"allTests": [
+				{
+					"response status code should have 201 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"response body data should have userId property and not equal to empty": true
+				}
+			]
+		},
+		{
+			"id": "fee68831-6a32-4ecd-b4ec-0143dd9c07df",
+			"name": "Adding User with Exist Username",
+			"url": "localhost:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response status code should have 400 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 400 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "475fa1a3-a165-4082-a6de-de4d47d98e70",
+			"name": "Adding User with Bad User Payload",
+			"url": "localhost:5000/users",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response status code should have 400 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 400 value": {
+					"pass": 6,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 6,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 6,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 6,
+					"fail": 0
+				}
+			},
+			"times": [
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"allTests": [
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				},
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				},
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				},
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				},
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				},
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "8af325d7-634b-4a0f-ac2e-05b7ee2e0623",
+			"name": "Getting User By Correct Id",
+			"url": "localhost:5000/users/user-ezKmGHXVsX4LXk9A",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response status code should have 200 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"response body data should contain user object": true,
+				"user object should contain only id, username, and fullname with correct value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 200 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body data should contain user object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"user object should contain only id, username, and fullname with correct value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"response status code should have 200 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"response body data should contain user object": true,
+					"user object should contain only id, username, and fullname with correct value": true
+				}
+			]
+		},
+		{
+			"id": "23ee1879-a977-476b-ac93-10cc7cf9ec02",
+			"name": "Getting User By Incorrect Id",
+			"url": "localhost:5000/users/xxxx",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"response status code should have 404 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 404 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"response status code should have 404 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "bb89871c-1efc-4785-9431-6392df3b9e1c",
+			"name": "Post Authentication with Valid Credentials (login dengan kredensial yang benar)",
+			"url": "localhost:5000/authentications",
+			"time": 87,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"response status code should have 201 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"response body data should have property accessToken and refreshToken with correct value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 201 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body data should have property accessToken and refreshToken with correct value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				87
+			],
+			"allTests": [
+				{
+					"response status code should have 201 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"response body data should have property accessToken and refreshToken with correct value": true
+				}
+			]
+		},
+		{
+			"id": "df1ba9a5-d860-41ee-a771-fdd03578d8d0",
+			"name": "Post Authentication with Invalid Credential (login dengan kredensial yang salah)",
+			"url": "localhost:5000/authentications",
+			"time": 62,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"response status code should have 401 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 401 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				62
+			],
+			"allTests": [
+				{
+					"response status code should have 401 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "d7527eda-c779-4ceb-8970-ccb0c5a8e2d7",
+			"name": "Put Authentication with Valid Refresh Token",
+			"url": "localhost:5000/authentications",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response status code should have 200 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"response body data should have property accessToken with correct value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 200 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body data should have property accessToken with correct value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"response status code should have 200 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"response body data should have property accessToken with correct value": true
+				}
+			]
+		},
+		{
+			"id": "9b0e149d-2dba-40a8-ba6e-88f17221c2c1",
+			"name": "Put Authentications with Invalid Refresh Token",
+			"url": "localhost:5000/authentications",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response status code should have 400 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 400 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "9ef6bce9-1301-41ad-ba73-ba3ee370205d",
+			"name": "Delete Authentication with Valid Refresh Token",
+			"url": "localhost:5000/authentications",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response status code should have 200 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 200 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"response status code should have 200 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		},
+		{
+			"id": "a2975983-9647-4266-9884-b08d2dd2491d",
+			"name": "Delete Authentication with Invalid Refresh Token",
+			"url": "localhost:5000/authentications",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response status code should have 400 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 400 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"response status code should have 400 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 307,
+	"collection": {
+		"requests": [
+			{
+				"id": "8b2d34ec-aefa-426f-8797-7102dcf1075e",
+				"method": "POST"
+			},
+			{
+				"id": "fee68831-6a32-4ecd-b4ec-0143dd9c07df",
+				"method": "POST"
+			},
+			{
+				"id": "475fa1a3-a165-4082-a6de-de4d47d98e70",
+				"method": "POST"
+			},
+			{
+				"id": "475fa1a3-a165-4082-a6de-de4d47d98e70",
+				"method": "POST"
+			},
+			{
+				"id": "475fa1a3-a165-4082-a6de-de4d47d98e70",
+				"method": "POST"
+			},
+			{
+				"id": "475fa1a3-a165-4082-a6de-de4d47d98e70",
+				"method": "POST"
+			},
+			{
+				"id": "475fa1a3-a165-4082-a6de-de4d47d98e70",
+				"method": "POST"
+			},
+			{
+				"id": "475fa1a3-a165-4082-a6de-de4d47d98e70",
+				"method": "POST"
+			},
+			{
+				"id": "8af325d7-634b-4a0f-ac2e-05b7ee2e0623",
+				"method": "GET"
+			},
+			{
+				"id": "23ee1879-a977-476b-ac93-10cc7cf9ec02",
+				"method": "GET"
+			},
+			{
+				"id": "bb89871c-1efc-4785-9431-6392df3b9e1c",
+				"method": "POST"
+			},
+			{
+				"id": "df1ba9a5-d860-41ee-a771-fdd03578d8d0",
+				"method": "POST"
+			},
+			{
+				"id": "d7527eda-c779-4ceb-8970-ccb0c5a8e2d7",
+				"method": "PUT"
+			},
+			{
+				"id": "9b0e149d-2dba-40a8-ba6e-88f17221c2c1",
+				"method": "PUT"
+			},
+			{
+				"id": "9ef6bce9-1301-41ad-ba73-ba3ee370205d",
+				"method": "DELETE"
+			},
+			{
+				"id": "a2975983-9647-4266-9884-b08d2dd2491d",
+				"method": "DELETE"
+			}
+		]
+	}
+}
